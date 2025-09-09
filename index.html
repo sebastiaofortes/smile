@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <title>Detector de sorrisos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  <!-- Material Design Button -->
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  
+  <!-- CSS Externos -->
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/guide.css">
+</head>
+
+<body>
+  <section id="demos" class="invisible">
+    <!-- Painel de Pontuação -->
+    <div id="score-panel">
+      <div class="score-item">
+        <span class="score-label">Desafios</span>
+        <span class="score-value" id="challenges-count">0</span>
+      </div>
+      <div class="score-item">
+        <span class="score-label">Dias</span>
+        <span class="score-value" id="current-streak">0</span>
+      </div>
+      <div class="score-item">
+        <span class="score-label">Recorde</span>
+        <span class="score-value" id="best-time">0.0s</span>
+      </div>
+      <button id="help-button" class="help-btn" title="Ver tutorial novamente">
+        <span>?</span>
+      </button>
+    </div>
+
+    <div id="liveView">
+      <button id="webcamButton" class="mdc-button mdc-button--raised">
+        <span class="mdc-button__ripple"></span>
+        <span class="mdc-button__label">Iniciar</span>
+      </button>
+      <video id="webcam" autoplay playsinline></video>
+      <canvas class="output_canvas" id="output_canvas"></canvas>
+    </div>
+
+    <div id="info-start"></div>
+    <div id="today-status" style="display: none;">
+      <div id="today-completed-message">✅ Desafio de hoje já completado!</div>
+    </div>
+    <div id="info-container" style="display: none;">
+      <div id="smile-timer">
+        0.0s
+      </div>
+      <progress id="smile-progress" value="0" max="15"></progress>
+      <div id="smile-progress-text">Felicidade</div>
+    </div>
+  </section>
+
+  <div id="fullscreenModal" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: white;
+  color: black;
+  z-index: 9999;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+">
+    <div id="celebration-content">
+      <h1 id="celebration-title">🎉 Parabéns! 🎉</h1>
+      <p id="celebration-message">Você completou o desafio!</p>
+      <div id="celebration-stats">
+        <div class="celebration-stat">
+          <span class="stat-number" id="modal-challenges">1</span>
+          <span class="stat-label">Desafios Completados</span>
+        </div>
+        <div class="celebration-stat">
+          <span class="stat-number" id="modal-streak">1</span>
+          <span class="stat-label">Dias Consecutivos</span>
+        </div>
+      </div>
+      <button id="close-modal-btn" class="mdc-button mdc-button--raised">Continuar Pratiando</button>
+      <button id="reset-score-btn" class="mdc-button mdc-button--outlined" style="margin-left: 10px;">Resetar Pontuação</button>
+    </div>
+  </div>
+
+  <!-- JavaScript Externo -->
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
