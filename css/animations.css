@@ -1,0 +1,26 @@
+/* Animações da barra de progresso */
+
+/* Animação de redução de largura */
+#smile-progress.shrink-on-complete {
+  transition: width 1s cubic-bezier(0.55, 0, 0.1, 1);
+  width: 20px !important;
+  min-width: 20px !important;
+  /* Você pode ajustar 1s para acelerar ou desacelerar */
+}
+
+/* Animação para a barra crescer até o tamanho total da tela */
+#smile-progress.grow-fullscreen {
+  width: 200vw !important;
+  height: 200vh !important;
+  max-width: none;
+  max-height: none;
+  z-index: 10000;
+  background: #fff;
+  transition: all 0.8s cubic-bezier(0.55, 0, 0.1, 1);
+}
+
+#smile-progress.grow-fullscreen::-webkit-progress-bar,
+#smile-progress.grow-fullscreen::-webkit-progress-value,
+#smile-progress.grow-fullscreen::-moz-progress-bar {
+  background-color: #fff !important;
+}
