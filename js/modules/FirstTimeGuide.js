@@ -88,7 +88,7 @@ export class FirstTimeGuide {
     modal.innerHTML = `
       <div class="guide-welcome-content">
         <div class="guide-welcome-header">
-          <h2>🎉 Bem-vindo ao Sorrisos!</h2>
+          <h2>🎉 Bem-vindo ao sorrIA!</h2>
           <p>Um aplicativo que detecta sorrisos com IA e gamifica a felicidade!</p>
         </div>
         
