@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ícone sorrIA</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .sorria-icon {
+            width: 120px;
+            height: 120px;
+            background-color: #2C5F5F; /* Azul-petróleo/ciano escuro */
+            border-radius: 25px; /* Cantos arredondados tipo squircle */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+            transition: transform 0.2s ease; /* Efeito hover opcional */
+        }
+
+        .sorria-icon:hover {
+            transform: translateY(-2px); /* Efeito de elevação no hover */
+        }
+
+        .sorria-text {
+            color: white;
+            font-size: 24px;
+            font-weight: 500; /* Espessura média */
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            text-align: center;
+            user-select: none; /* Previne seleção do texto */
+        }
+
+        /* Versão menor para demonstração */
+        .demo-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .sorria-icon.small {
+            width: 80px;
+            height: 80px;
+            border-radius: 18px;
+        }
+
+        .sorria-icon.small .sorria-text {
+            font-size: 16px;
+        }
+
+        .sorria-icon.large {
+            width: 160px;
+            height: 160px;
+            border-radius: 32px;
+        }
+
+        .sorria-icon.large .sorria-text {
+            font-size: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <!-- Tamanho pequeno -->
+        <div class="sorria-icon small">
+            <span class="sorria-text">sorrIA</span>
+        </div>
+
+        <!-- Tamanho médio (padrão) -->
+        <div class="sorria-icon">
+            <span class="sorria-text">sorrIA</span>
+        </div>
+
+        <!-- Tamanho grande -->
+        <div class="sorria-icon large">
+            <span class="sorria-text">sorrIA</span>
+        </div>
+    </div>
+</body>
+</html>
